@@ -1,0 +1,16 @@
+{
+    "contents" : "##set,seed(123)可以保证rnorm的纸一样\n##dnrom\n##pnorm\n##qporm\nrm(list=ls())\npower <- function (n,delta,alpha=0.05){\n  tmp <- sqrt(n)*delta-qnorm(alpha/2,lower.tail=FALSE)  \n  pnorm(tmp)\n}\nn <- seq(10,100,5)\ndelta <- 0.5\nplot(n,power(n,delta))\nabline(h=0.8,lty=2)\n\nz1 <- qnorm(alpha/2,lower.tail=FALSE)\nz2 <- qnorm(0.2,lower.tail=FALSE)\n(z1+z2)^2/delta^2\n",
+    "created" : 1473211282070.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "852541558",
+    "id" : "D2AC957F",
+    "lastKnownWriteTime" : 1473165517,
+    "path" : "E:/Program Files/RStudy/market/market/tmp.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

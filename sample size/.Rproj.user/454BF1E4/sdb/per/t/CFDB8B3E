@@ -1,0 +1,16 @@
+{
+    "contents" : "  \n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"sample size\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"n\",\n                  \"Numbers :\",\n                  min = 10,\n                  max = 100,\n                  value = 50,\n                  step=5),\n        \n    sliderInput(\"delta\",\n                \"Delta:\",\n                min = 0,\n                max = 1,\n                value = 0.5,\n                step=0.1)\n  ),\n  \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n))\n",
+    "created" : 1473210989237.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2885285282",
+    "id" : "CFDB8B3E",
+    "lastKnownWriteTime" : 1473211863,
+    "path" : "E:/Program Files/RStudy/Shiny/sampleSize/sample size/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

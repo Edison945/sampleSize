@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output) {\n  \n \n  output$distPlot <- renderPlot({\n    power <- function (n,delta,alpha=0.05){\n      tmp <- sqrt(n)*delta-qnorm(alpha/2,lower.tail=FALSE)  \n      pnorm(tmp)\n    }\n    num <- seq(10,input$n,5)\n    plot(num,power(num,input$delta))\n    abline(h=0.8,lty=2)\n    \n  })\n\n})\n",
+    "created" : 1473210989658.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3230405716",
+    "id" : "F4FAFBA4",
+    "lastKnownWriteTime" : 1473213637,
+    "path" : "E:/Program Files/RStudy/Shiny/sampleSize/sample size/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
